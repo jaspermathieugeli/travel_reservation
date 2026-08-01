@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
         <ul className='hidden md:flex'>
             <li>Home</li>
-            <li>Destinations</li>
+            <li>Beaches</li>
             <li>Travel</li>
             <li>View</li>
             <li>Book</li>
@@ -42,7 +42,7 @@ const Navbar = () => {
             </div>
             <ul>
                 <li className='border-b'>Home</li>
-                <li className='border-b'>Destinations</li>
+                <li className='border-b'>Beaches</li>
                 <li className='border-b'>Travel</li>
                 <li className='border-b'>View</li>
                 <li className='border-b'>Book</li>
