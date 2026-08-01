@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {RiCustomerService2Fill} from 'react-icons/ri';
 import {MdOutlineTravelExplore} from 'react-icons/md';
 
