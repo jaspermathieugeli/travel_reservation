@@ -1,13 +1,7 @@
 import React, {useState} from 'react'
-import keywest from '../assets/keywest.jpg';
-import borabora from '../assets/borabora.jpg';
-import borabora2 from '../assets/borabora2.jpg';
-import maldives from '../assets/maldives.jpg';
-import maldives2 from '../assets/maldives2.jpg';
-import maldives3 from '../assets/maldives3.jpg';
 import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from 'react-icons/bs';
 
-const sliderData = [keywest, borabora, borabora2, maldives, maldives2, maldives3];
+const sliderData = [];
 
 const Carousel = () => {
     const [slide, setSlide] = useState(0);

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Beaches from './components/Beaches';
+import Home from './components/Home';
+import Accommodations from './components/Accommodations';
 import Search from './components/Search';
 import Selects from './components/Selects';
 import Carousel from './components/Carousel';
@@ -11,9 +11,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Beaches />
+      <Home />
       <Search />
+      <Accommodations />
       <Selects />
       <Carousel />
       <Footer />

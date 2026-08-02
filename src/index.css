@@ -10,7 +10,7 @@
 }
 
 .icon {
-  color: var(--primary-dark);
+  color: black;
 }
 
 @layer base {
@@ -36,7 +36,7 @@
   }
 
   button {
-    @apply p-3 border bg-gradient-to-b from-[var(--primary-light)] to-[var(--primary-dark)] text-white rounded-md
+    @apply p-3 border bg-black text-white rounded-md
   }
 
   .icon {
