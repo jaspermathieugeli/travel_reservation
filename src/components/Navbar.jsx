@@ -14,24 +14,24 @@ const Navbar = () => {
     };
 
   return (
-    <div className='flex w-full justify-between items-center h-20 px-4 fixed z-10 bg-black text-white'>
+    <div className='flex w-full justify-between items-center h-20 px-4 fixed z-20 bg-black text-white'>
         <div>
             <h1 className={logo ? 'hidden' : 'block'}>ACCOMMODATE</h1>
         </div>
-        <ul className='hidden md:flex'>
-            <li>Home</li>
-            <li>Accodomodations</li>
-            <li>My Bookings</li>
-            <li>About</li>
-            <li>Contact</li>
+        <ul className='hidden lg:flex'>
+            <li className='lg:text-xl font-light'>Home</li>
+            <li className='lg:text-xl font-light'>Accodomodations</li>
+            <li className='lg:text-xl font-light'>My Bookings</li>
+            <li className='lg:text-xl font-light'>About</li>
+            <li className='lg:text-xl font-light'>Contact</li>
         </ul>
-        <div className='hidden md:flex'>
+        <div className='hidden lg:flex'>
             <BsPerson className='mr-1' size={20} />
             <BiSearch className='ml-1' size={20} />
         </div>
 
         {/* Hamburger */}
-        <div onClick={handleNav} className='md:hidden z-10'>
+        <div onClick={handleNav} className='lg:hidden z-10'>
             {nav ? <AiOutlineClose className='text-black' size={20} /> : <HiOutlineMenuAlt4 size={20} />}
         </div>
 
@@ -41,11 +41,11 @@ const Navbar = () => {
                 <h1>ACCOMMODATE</h1>
             </div>
             <ul>
-                <li className='border-b'>Home</li>
-                <li className='border-b'>Accodomodations</li>
-                <li className='border-b'>My Bookings</li>
-                <li className='border-b'>About</li>
-                <li className='border-b'>Contact</li>
+                <li className='border-b font-light'>Home</li>
+                <li className='border-b font-light'>Accodomodations</li>
+                <li className='border-b font-light'>My Bookings</li>
+                <li className='border-b font-light'>About</li>
+                <li className='border-b font-light'>Contact</li>
                 <div className='flex flex-col'>
                     <button className='my-3'>Search</button>
                     <button className='my-3'>Account</button>

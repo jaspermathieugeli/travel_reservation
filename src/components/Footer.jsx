@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='max-w-[1240px] mx-auto flex flex-col px-4'>
             <div className='sm:flex text-center justify-between items-center py-8'>
                 <h1>ACCOMMODATE</h1>
-                <div className='flex justify-between w-full sm:max-w-[280px]'>
+                <div className='flex justify-between w-full sm:max-w-[280px] py-4'>
                     <FaFacebook className='icon' />
                     <FaInstagram className='icon' />
                     <FaTwitter className='icon' />
@@ -16,19 +16,19 @@ const Footer = () => {
                 </div>
             </div>
             <div className='flex justify-between'>
-                <ul className='text-left lg:flex'>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>Privacy Policy</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>Terms of Service</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>Careers</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>Newsroom</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>FAQ</li>
+                <ul className='lg:flex text-center'>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>Privacy Policy</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>Terms of Service</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>Careers</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>Newsroom</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>FAQ</li>
                 </ul>
-                <ul className='text-right lg:flex'>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>Home</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>Accommodations</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>My Bookings</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>About</li>
-                    <li className='py-1 cursor-pointer transition-colors text-base'>Contact</li>
+                <ul className='lg:flex text-center'>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>Home</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>Accommodations</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>My Bookings</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>About</li>
+                    <li className='py-1 cursor-pointer transition-colors text-base font-light'>Contact</li>
                 </ul>
             </div>
         </div>
