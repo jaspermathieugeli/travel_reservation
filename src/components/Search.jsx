@@ -5,8 +5,6 @@ import { MdOutlineTravelExplore } from 'react-icons/md';
 const Search = () => {
   return (
     <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-16'>
-      
-      {/* Left Content Area */}
       <div className='lg:col-span-2 flex flex-col justify-evenly'>
         <div>
             <h2 className='text-3xl font-bold py-2'>Booking</h2>
@@ -14,11 +12,10 @@ const Search = () => {
                 Choose from popular furniture styles in our accommodations to book to find the perfect fit for your stay.
             </p>
         </div>
-        
         <div className='grid sm:grid-cols-2 gap-8 py-4'>
             <div className='flex flex-col lg:flex-row items-center text-center lg:text-left gap-4'>
-                <button className='p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors'>
-                    <RiCustomerService2Fill size={50} className='text-black' />
+                <button className='p-3 rounded-md bg-black transition-colors'>
+                    <RiCustomerService2Fill size={50} className='text-white' />
                 </button>
                 <div className='w-full'>
                     <h3 className='font-bold py-2'>24/7 Customer Service</h3>
@@ -26,8 +23,8 @@ const Search = () => {
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row items-center text-center lg:text-left gap-4'>
-                <button className='p-3 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors'>
-                    <MdOutlineTravelExplore size={50} className='text-black' />
+                <button className='p-3 rounded-md bg-black transition-colors'>
+                    <MdOutlineTravelExplore size={50} className='text-white' />
                 </button>
                 <div className='w-full'>
                     <h3 className='font-bold py-2'>Explore Options</h3>
@@ -36,13 +33,11 @@ const Search = () => {
             </div>
         </div>
       </div>
-
-      {/* Right Content Area (Booking Form) */}
       <div>
         <div className='border text-center rounded-md overflow-hidden mb-6 shadow-sm'>
-            <p className='py-2 font-bold'>GET AN ADDITIONAL 10% OFF</p>
-            <p className='py-1 text-gray'>12 HOURS LEFT</p>
-            <p className='py-2 bg-black text-gray-200 font-bold'>BOOK NOW AND SAVE</p>
+            <p className='py-2 text-black font-bold'>GET AN ADDITIONAL 10% OFF</p>
+            <p className='py-2 text-black font-bold'>12 HOURS LEFT</p>
+            <p className='py-2 text-black font-bold'>BOOK NOW AND SAVE</p>
         </div>
         
         <form className='w-full'>
@@ -59,18 +54,17 @@ const Search = () => {
             </div>
             <div className='flex flex-col my-2'>
                 <label htmlFor='check-in' className='font-semibold mb-1'>Check-in</label>
-                <input id='check-in' className='border rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500' type='date' />
+                <input id='check-in' className='border rounded-md py-2 px-3 focus:outline-none focus:ring-2' type='date' />
             </div>
             <div className='flex flex-col my-2'>
                 <label htmlFor='check-out' className='font-semibold mb-1'>Check-out</label>
-                <input id='check-out' className='border rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500' type='date' />
+                <input id='check-out' className='border rounded-md py-2 px-3 focus:outline-none focus:ring-2' type='date' />
             </div>
-            <button type='submit' className='w-full my-4 py-3 bg-black text-white rounded-md hover:bg-blue-700 transition-colors font-bold'>
+            <button type='submit' className='w-full my-4 py-3 bg-black text-white rounded-md transition-colors font-bold'>
                 Book
             </button>
         </form>
       </div>
-      
     </div>
   )
 }

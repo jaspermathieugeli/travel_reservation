@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from 'react-icons/bs';
 import minimalist_room from '../assets/minimalist_room.jpg';
 import minimalist_room2 from '../assets/minimalist_room2.jpg';
 import bohemian_room from '../assets/bohemian_room.jpg';
@@ -10,46 +11,56 @@ import decorative_art_room2 from '../assets/decorative_art_room2.jpg';
 import coastal_room from '../assets/coastal_room.jpg';
 import coastal_room2 from '../assets/coastal_room2.jpg';
 
-// Helper component to build the card while keeping your grid sizing
-const OptionCard = ({ image, title }) => (
-  <div className='col-span-5 md:col-span-1 row-span-1 border border-gray-200 rounded-lg shadow-md hover:shadow-xl hover:scale-105 duration-300 cursor-pointer overflow-hidden flex flex-col bg-white text-left'>
-    <img className='w-full h-48 object-cover' src={image} alt={title} />
-    <div className='p-4 flex flex-col justify-between flex-grow'>
-      <h3 className='font-bold text-gray-800 text-center mb-3'>{title}</h3>
-      <button className='w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-colors text-sm font-semibold'>
-        Select Option
-      </button>
+const CarouselCard = ({ images, title }) => {
+  const [slide, setSlide] = useState(0);
+  const length = images.length;
+  const previousSlide = () => {
+    setSlide(slide === 0 ? length - 1 : slide - 1);
+  };
+  const nextSlide = () => {
+    setSlide(slide === length - 1 ? 0 : slide + 1);
+  };
+  return (
+    <div className='col-span-5 md:col-span-1 row-span-1 border border-gray-200 shadow-md hover:shadow-xl hover:scale-105 duration-300 overflow-hidden flex flex-col bg-white text-left'>
+      <div className='relative w-full h-48 group'>
+        <BsArrowLeftSquareFill onClick={previousSlide} className='absolute top-[50%] -translate-y-1/2 text-2xl text-white/80 hover:text-white cursor-pointer left-2 z-10 hidden group-hover:block shadow-sm' />
+        <BsArrowRightSquareFill onClick={nextSlide} className='absolute top-[50%] -translate-y-1/2 text-2xl text-white/80 hover:text-white cursor-pointer right-2 z-10 group-hover:block shadow-sm' />
+        {images.map((item, index) => (
+          <div key={index} className={index === slide ? 'opacity-100 transition-opacity duration-300' : 'opacity-0 absolute inset-0'}>
+              {index === slide && (
+                <img className='w-full h-48 object-cover' src={item} alt={`${title} view ${index + 1}`} />
+              )}
+          </div>
+        ))}
+      </div>
+      <div className='p-4 flex flex-col justify-between flex-grow'>
+        <h3 className='font-bold text-gray-800 text-center mb-3'>{title}</h3>
+        <button className='w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors text-sm font-semibold'>
+          Select Option
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Accommodations = () => {
+  const roomStyles = [
+    { title: "Minimalist Rooms", images: [minimalist_room, minimalist_room2] },
+    { title: "Bohemian Rooms", images: [bohemian_room, bohemian_room2] },
+    { title: "Industrial Rooms", images: [industrial_room, industrial_room2] },
+    { title: "Decorative Art Rooms", images: [decorative_art_room, decorative_art_room2] },
+    { title: "Coastal Rooms", images: [coastal_room, coastal_room2] },
+  ];
   return (
     <div className='max-w-[1240px] mx-auto py-16 px-4 text-center'>
       <h1 className='py-2 text-3xl font-bold'>Accommodations</h1>
       <p className='py-2 text-gray-600 mb-6'>Choose your preferred furniture style</p>
-      
-      {/* Your preserved outer layout wrapper */}
-      <div className='md:flex md:gap-4 lg:grid lg:gap-4'>
-        
-        {/* Your preserved Row 1 wrapper */}
+      <div className='md:gap-4 lg:grid lg:gap-4'>
         <div className='grid grid-cols-1 grid-rows-5 lg:grid-cols-5 lg:grid-rows-1 gap-5 md:gap-4 lg:gap-4'>
-          <OptionCard image={minimalist_room} title="Minimalist Room #1" />
-          <OptionCard image={bohemian_room} title="Bohemian Room #1" />
-          <OptionCard image={industrial_room} title="Industrial Room #1" />
-          <OptionCard image={decorative_art_room} title="Decorative Art Room #1" />
-          <OptionCard image={coastal_room} title="Coastal Room #1" />
+          {roomStyles.map((room, index) => (
+            <CarouselCard key={index} images={room.images} title={room.title} />
+          ))}
         </div>
-        
-        {/* Your preserved Row 2 wrapper */}
-        <div className='grid grid-cols-1 grid-rows-5 lg:grid-cols-5 lg:grid-rows-1 gap-5 md:gap-4 lg:gap-4'>
-          <OptionCard image={minimalist_room2} title="Minimalist Room #2" />
-          <OptionCard image={bohemian_room2} title="Bohemian Room #2" />
-          <OptionCard image={industrial_room2} title="Industrial Room #2" />
-          <OptionCard image={decorative_art_room2} title="Decorative Art Room #2" />
-          <OptionCard image={coastal_room2} title="Coastal Room #2" />
-        </div>
-        
       </div>
     </div>
   )
