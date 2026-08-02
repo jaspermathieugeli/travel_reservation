@@ -25,10 +25,10 @@ const Footer = () => {
                 </ul>
                 <ul className='text-right lg:flex'>
                     <li>Home</li>
-                    <li>Beaches</li>
-                    <li>Travel</li>
-                    <li>View</li>
-                    <li>Book</li>
+                    <li>Accodomodations</li>
+                    <li>My Bookings</li>
+                    <li>About</li>
+                    <li>Contact</li>
                 </ul>
             </div>
         </div>

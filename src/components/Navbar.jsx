@@ -16,14 +16,14 @@ const Navbar = () => {
   return (
     <div className='flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white'>
         <div>
-            <h1 onClick={handleNav} className={logo ? 'hidden' : 'block'}>BEACHES</h1>
+            <h1 onClick={handleNav} className={logo ? 'hidden' : 'block'}>ACCOMMODATE</h1>
         </div>
         <ul className='hidden md:flex'>
             <li>Home</li>
-            <li>Beaches</li>
-            <li>Travel</li>
-            <li>View</li>
-            <li>Book</li>
+            <li>Accodomodations</li>
+            <li>My Bookings</li>
+            <li>About</li>
+            <li>Contact</li>
         </ul>
         <div className='hidden md:flex'>
             <BsPerson className='mr-1' size={20} />
@@ -42,10 +42,10 @@ const Navbar = () => {
             </div>
             <ul>
                 <li className='border-b'>Home</li>
-                <li className='border-b'>Beaches</li>
-                <li className='border-b'>Travel</li>
-                <li className='border-b'>View</li>
-                <li className='border-b'>Book</li>
+                <li className='border-b'>Accodomodations</li>
+                <li className='border-b'>My Bookings</li>
+                <li className='border-b'>About</li>
+                <li className='border-b'>Contact</li>
                 <div className='flex flex-col'>
                     <button className='my-3'>Search</button>
                     <button className='my-3'>Account</button>
