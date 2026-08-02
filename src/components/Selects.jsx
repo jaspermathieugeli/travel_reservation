@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import keywest from '../assets/keywest.jpg';
 import borabora from '../assets/borabora.jpg';
 import borabora2 from '../assets/borabora2.jpg';
