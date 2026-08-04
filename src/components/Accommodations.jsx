@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Removed useLocation
 import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from 'react-icons/bs';
 import minimalist_room from '../assets/minimalist_room.jpg';
 import minimalist_room2 from '../assets/minimalist_room2.jpg';
@@ -15,14 +15,14 @@ import coastal_room2 from '../assets/coastal_room2.jpg';
 const CarouselCard = ({ images, title, id }) => {
   const [slide, setSlide] = useState(0);
   const length = images.length;
-  const location = useLocation();
-  const isSelected = location.pathname === `/room/${id}`;
+
   const previousSlide = () => {
     setSlide(slide === 0 ? length - 1 : slide - 1);
   };
   const nextSlide = () => {
     setSlide(slide === length - 1 ? 0 : slide + 1);
   };
+
   return (
     <div className='col-span-5 md:col-span-1 row-span-1 border border-gray-200 shadow-md hover:shadow-xl hover:scale-105 duration-300 overflow-hidden flex flex-col bg-white text-left'>
       <div className='relative w-full h-48 group'>
@@ -38,20 +38,19 @@ const CarouselCard = ({ images, title, id }) => {
       </div>
       <div className='p-4 flex flex-col justify-between flex-grow'>
         <h3 className='font-bold text-gray-800 text-center mb-3'>{title}</h3>
+        
+        {/* Reverted back to a standard static link */}
         <Link 
-          to={isSelected ? '/' : `/room/${id}`} 
-          className={`w-full py-2 transition-colors text-sm font-semibold text-center block rounded ${
-            isSelected 
-              ? 'bg-black text-white hover:bg-gray-800' 
-              : 'bg-black text-white hover:bg-gray-800'
-          }`}
+          to={`/room/${id}`} 
+          className='w-full bg-black text-white py-2 hover:bg-gray-800 transition-colors text-sm font-semibold text-center block rounded'
         >
-          {isSelected ? 'Close Option' : 'Select Option'}
+          Select Option
         </Link>
       </div>
     </div>
   );
 };
+
 const Accommodations = () => {
   const roomStyles = [
     { id: "minimalist", title: "Minimalist Rooms", images: [minimalist_room, minimalist_room2] },
@@ -76,4 +75,4 @@ const Accommodations = () => {
   )
 }
 
-export default Accommodations
+export default Accommodations;

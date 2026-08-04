@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
         <ul className='hidden lg:flex'>
             <li className='lg:text-xl font-light'>Home</li>
-            <li className='lg:text-xl font-light'>Accodomodations</li>
+            <li className='lg:text-xl font-light'>Accomodations</li>
             <li className='lg:text-xl font-light'>My Bookings</li>
             <li className='lg:text-xl font-light'>About</li>
             <li className='lg:text-xl font-light'>Contact</li>

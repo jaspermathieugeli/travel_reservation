@@ -12,13 +12,24 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar />
-        <Home />
-        <Accommodations />
+        
+        {/* Everything inside Routes is swappable "pages" */}
         <Routes>
+          
+          {/* Page 1: The Home Page */}
+          <Route path="/" element={
+            <>
+              <Home />
+              <Accommodations />
+              <Showcase />
+            </>
+          } />
+          
+          {/* Page 2: The Specific Room Page */}
           <Route path="/room/:roomId" element={<Rooms />} /> 
+          
         </Routes>
         
-        <Showcase />
         <Footer />
       </div>
     </BrowserRouter>
