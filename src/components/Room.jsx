@@ -7,8 +7,6 @@ const Room = ({ roomName, description, images }) => {
 
   return (
     <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-16'>
-      
-      {/* Left Content Area */}
       <div className='lg:col-span-2 flex flex-col mx-8'>
         <div>
             <h2 className='text-3xl font-bold py-2'>{roomName}</h2>
@@ -20,8 +18,6 @@ const Room = ({ roomName, description, images }) => {
                 <img className='h-full object-cover px-4 py-4 col-span-1 row-span-1' src={images[1]} alt={`${roomName} view 2`} />
             </div>
         </div>
-        
-        {/* Room Facilities section replacing the old icon blocks */}
         <div className='py-6'>
             <h3 className='text-xl font-bold py-2 border-b border-gray-200 mb-4'>Room Facilities</h3>
             <ul className='grid sm:grid-cols-2 gap-3 text-gray-700'>
@@ -34,7 +30,6 @@ const Room = ({ roomName, description, images }) => {
             </ul>
         </div>
       </div>
-
       <div className=''>
         <div className='bg-gray-200 px-4 py-6 self-start shadow-sm'>
             <div className='bg-gray-400 border text-center overflow-hidden mb-6 shadow-sm'>

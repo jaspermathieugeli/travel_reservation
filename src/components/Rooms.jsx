@@ -52,7 +52,7 @@ const Rooms = () => {
     return <div className="text-center py-16 text-3xl font-bold">Room not found!</div>;
   }
   return (
-    <div>
+    <div className='py-16'>
       <Room 
         roomName={selectedRoom.roomName}
         description={selectedRoom.description}
